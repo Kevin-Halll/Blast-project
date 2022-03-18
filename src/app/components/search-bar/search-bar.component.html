@@ -1,0 +1,14 @@
+<form action="" [formGroup]="searchBar" class="searchForm">
+            
+    <div class="inputCtrl">
+        <input type="text"
+        formControlName="search"
+        [(ngModel)]="value"
+        placeholder="Search anything"
+        >
+    </div>
+
+    <button mat-flat-button color="">
+        <mat-icon>search</mat-icon>
+    </button>
+</form>

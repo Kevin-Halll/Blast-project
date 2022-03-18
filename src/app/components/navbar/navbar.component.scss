@@ -1,0 +1,19 @@
+nav mat-toolbar{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    padding: 0 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 25px;
+}
