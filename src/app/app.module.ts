@@ -10,13 +10,15 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroCardsComponent } from './components/hero-cards/hero-cards.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SearchBarComponent,
     HeroComponent,
-    HeroCardsComponent
+    HeroCardsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

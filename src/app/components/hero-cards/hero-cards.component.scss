@@ -6,6 +6,9 @@
 svg{
     width: 100%;
     height: fit-content;
+    // height: 200px;
+    // object-fit: cover;
+    // object-position: center;
 }
 .contCtrl{
     position: absolute;
@@ -37,5 +40,12 @@ svg{
 }
 
 .info{
-    padding: 1rem;
+    padding: 1.2rem;
+}
+.visit{
+    text-align: center;
+}
+button{
+    display: inline-block;
+    justify-content: center;
 }
