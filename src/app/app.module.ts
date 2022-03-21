@@ -10,7 +10,11 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroCardsComponent } from './components/hero-cards/hero-cards.component';
+
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+
 import { FooterComponent } from './components/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,11 @@ import { FooterComponent } from './components/footer/footer.component';
     SearchBarComponent,
     HeroComponent,
     HeroCardsComponent,
+
+    RegistrationFormComponent,
+  
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,

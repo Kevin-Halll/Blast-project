@@ -1,0 +1,111 @@
+
+<div>
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+        <h1 class="form-title">Registration Form</h1>
+
+        <!-- first name information -->
+        <div class="input-field">
+            <label for="firstName" class="required-field">First Name</label>
+            <input type="text" name="firstName" placeholder="First Name" formControlName="firstName" >
+
+            <div class="errors" *ngIf="firstName?.invalid && firstName?.touched">
+                <span *ngIf="firstName?.errors?.['required']">Please enter first name</span>
+            </div>
+        </div>
+
+        <!-- last name information -->
+        <div class="input-field">
+            <label for="lastName" class="required-field">Last Name</label>
+            <input type="text" name="lastName" placeholder="Last Name" formControlName="lastName">
+
+            <div class="errors" *ngIf="lastName?.invalid && lastName?.touched">
+                <span *ngIf="lastName?.errors?.['required']">Please enter last name</span>
+            </div>
+        </div>
+
+        <!-- email information -->
+        <div class="input-field">
+            <label for="email" class="required-field">Email</label>
+            <input type="email" name="email" placeholder="Email" formControlName="email">
+
+            <div class="errors" *ngIf="email?.invalid && email?.touched">
+                <span *ngIf="email?.errors?.['required']">Please enter email</span>
+                <span *ngIf="email?.errors?.['pattern']">Please enter a valid email</span>
+            </div>
+        </div>
+
+        <!-- address information -->
+        <div formGroupName="address">
+            <div class="input-field">
+                <label for="address" class="required-field">Address</label>
+                <input type="text" name="address" placeholder="Street Address" formControlName="streetAddress">
+            </div>
+    
+            <div class="address-sub">
+                <input type="text" placeholder="City" formControlName="addressCity">
+             
+                <select name="" id="" class="parish" formControlName="addressParish">
+                    <option value="">Parish</option>
+                    <option value="Kingston">Kingston</option>
+                    <option value="St Catherine">St Catherine</option>
+                    <option value="St Catherine">St Andrew</option>
+                    <option value="St Catherine">Clarendon</option>
+                    <option value="St Catherine">Manchester</option>
+                    <option value="St Catherine">St Elizabeth</option>
+                    <option value="St Catherine">Westmoreland</option>
+                    <option value="St Catherine">Hanover</option>
+                    <option value="St Catherine">St James</option>
+                    <option value="St Catherine">Trewalany</option>
+                    <option value="St Catherine">St Ann</option>
+                    <option value="St Catherine">St Mary</option>
+                    <option value="St Catherine">Portland</option>
+                    <option value="St Catherine">St Thomas</option>
+                </select>
+            </div>
+    
+            <div class="errors">
+                <!-- <span *ngIf="registerForm?.address?.errors">Please enter an address</span> -->
+                
+                <!-- should be fixed -->
+                <span *ngIf="streetAddress?.errors?.['required'] && streetAddress?.touched">Please enter street address</span>
+                <span *ngIf="addressCity?.errors?.['required'] && addressCity?.touched">Please enter a city</span>
+                <span *ngIf="addressParish?.errors?.['required'] && addressParish?.touched">Please enter a parish</span>
+            </div>
+            
+        </div>
+        
+        <!-- date of birth information -->
+        <div class="input-field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" placeholder="Enter text" formControlName="dob">
+
+            <div class="errors" *ngIf="dob?.invalid && dob?.touched">
+                <span *ngIf="dob?.errors?.['required']">Please enter a valid date of birth</span>
+            </div>
+        </div>
+
+        <!-- password information -->
+        <div class="input-field">
+            <label for="password" class="required-field">Password</label>
+            <input type="password" name="password" placeholder="Password" formControlName="password">
+
+            <div class="errors" *ngIf="password?.invalid && password?.touched">
+                <span *ngIf="password?.errors?.['required']">Please enter a password</span>
+                <span *ngIf="password?.errors?.['pattern']">Please enter a more secure password</span>
+            </div>
+        </div>
+
+        <!-- confirm passowrd information -->
+        <div class="input-field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" name="lastName" placeholder="Confirm Password" formControlName="confirmPassword">
+
+            <div class="errors" *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
+                <span *ngIf="confirmPassword?.errors?.['mismatch']">Passwords do not match</span>
+            </div>
+        </div>
+
+        <!-- submit button -->
+        <button class="signup-button" [disabled]="!registerForm.valid">Sign Up</button>
+    </form> 
+</div>
