@@ -63,8 +63,10 @@
                 </select>
             </div>
     
-            <div class="errors" *ngIf="!registerForm.valid" >
+            <div class="errors">
                 <!-- <span *ngIf="registerForm?.address?.errors">Please enter an address</span> -->
+                
+                <!-- should be fixed -->
                 <span *ngIf="streetAddress?.errors?.['required'] && streetAddress?.touched">Please enter street address</span>
                 <span *ngIf="addressCity?.errors?.['required'] && addressCity?.touched">Please enter a city</span>
                 <span *ngIf="addressParish?.errors?.['required'] && addressParish?.touched">Please enter a parish</span>
