@@ -10,9 +10,15 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroCardsComponent } from './components/hero-cards/hero-cards.component';
+
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { ReviewFormComponent } from './components/review-form/review-form.component';
 import { RatingComponent } from './components/rating/rating.component';
+import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +26,11 @@ import { RatingComponent } from './components/rating/rating.component';
     SearchBarComponent,
     HeroComponent,
     HeroCardsComponent,
+    RegistrationFormComponent,
     FooterComponent,
     ReviewFormComponent,
     RatingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +39,7 @@ import { RatingComponent } from './components/rating/rating.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
