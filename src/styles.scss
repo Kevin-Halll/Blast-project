@@ -2,3 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.registration-form{
+    background: linear-gradient(to bottom, black 50%, white 50%);
+    // height: 100vh;
+    padding: 2em;
+}
