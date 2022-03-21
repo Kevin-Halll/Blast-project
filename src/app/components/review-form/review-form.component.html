@@ -1,0 +1,45 @@
+<div class="lead">
+    <h1>
+        Your review is very important to us.
+    </h1>
+
+    <h1>
+        Tell us what you think
+    </h1>
+</div>
+<section class="container">
+
+
+    <div class="formCont">
+        <form action="" [formGroup]="ratingForm">
+            <div style="display: flex; justify-content: space-between;">
+                <h1>Company Name</h1>
+
+              <div>
+                  <label class="rating-label">
+                      <input
+                      class="rating rating--nojs"
+                      max="5"
+                      step="1"
+                      type="range"
+                      formControlName="companyRating"
+                      >
+                      <sup><b>Give your rating</b></sup>
+                  </label>
+              </div>
+           </div>
+
+           <div>
+               <textarea name="" id="" cols="100" rows="10"
+               placeholder="Blast your experience"
+               formControlName="comments"
+               ></textarea>
+           </div>
+           <br>
+           <div style="text-align: center;">
+            <button mat-flat-button color="warn">Submit Review</button>
+           </div>
+            <!-- <app-rating></app-rating> -->
+        </form>
+    </div>
+</section>

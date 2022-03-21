@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroCardsComponent } from './components/hero-cards/hero-cards.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReviewFormComponent } from './components/review-form/review-form.component';
+import { RatingComponent } from './components/rating/rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroComponent,
     HeroCardsComponent,
     FooterComponent,
+    ReviewFormComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
