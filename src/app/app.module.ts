@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroCardsComponent } from './components/hero-cards/hero-cards.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroComponent,
     HeroCardsComponent,
     FooterComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
