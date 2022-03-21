@@ -14,6 +14,8 @@ import { HeroCardsComponent } from './components/hero-cards/hero-cards.component
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,9 @@ import { FooterComponent } from './components/footer/footer.component';
     SearchBarComponent,
     HeroComponent,
     HeroCardsComponent,
-
     RegistrationFormComponent,
-  
     FooterComponent,
-
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +35,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

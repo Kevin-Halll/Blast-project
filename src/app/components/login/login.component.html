@@ -1,0 +1,29 @@
+<section class="top"></section>
+<form [formGroup]="Login" (ngSubmit)="submit()">
+    <div class="container">
+
+      <h1>Blast</h1>
+
+      <div class="userName">
+        <input type="email" placeholder="Username" formControlName="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+        <div class="error" *ngIf="email?.invalid && email?.touched">
+            <span> Enter a valid email</span>
+        </div>
+      </div>
+      <div class="password">
+        <input type="password" placeholder="Password" formControlName="password">
+        <div class="error" *ngIf="password?.invalid && password?.touched">
+            <span>Enter valid password</span>
+        </div>
+      </div>
+      <div class="btn">
+        <button>Login</button>
+      </div>
+
+    </div>
+</form>
+
+
+
+
+
