@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   myUrl: any;
 
   Login = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.maxLength(255)]),
+    email: new FormControl('', [Validators.required, Validators.maxLength(255), Validators.pattern('[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$')]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
   });
 
@@ -66,5 +66,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  stopPropagation(event: any){
+    event.stopPropagation();
+}
 
 }
