@@ -1,41 +1,31 @@
-.heading{
-    color: white;
-    font-family: sans-serif;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .form{
     background-color: white;
-    // border: 1px solid grey;
     box-shadow: 1px 1px 5px 0px rgba(34, 34, 34, 0.75);
     border-radius: 8px;
     margin: 0 auto;
     padding: 2.4rem 4rem 1.2rem 4rem;
-    width: 30%;
-}
-
-.form .form-title{
-    text-align: center;
+    width: 40%;
 }
 
 .form-title{
     color: Black;
     font-weight:Bold;
+    text-align: center;
 }
 
 .form .input-field{
-    margin:24px 0;
+    margin:18px 0;
     position: relative;
 }
 
+// form required fields
 .form .required-field::after{
     color: #F44336;
     content: "*";
     margin-left: 2px
 }
 
+// form input field
 .form input{
     box-sizing: border-box;
     padding: 5px;
@@ -71,9 +61,10 @@ button:disabled{
     cursor: not-allowed;
 }
 
-.errors{
-    position: absolute;
-}
+// prevent jumping of form after errors popup
+// .errors{
+//     position: absolute;
+// }
 
 .errors span{
     color: red;
