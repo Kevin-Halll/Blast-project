@@ -90,7 +90,7 @@
         <div class="input-field">
             <label for="password" class="required-field">Password</label>
             <input type="password" name="password" placeholder="Password" formControlName="password">
-            <mat-hint *ngIf="password?.errors?.['pattern'] || password?.invalid">Password must have at least 8 characters. Must contain at least one uppercase letter, one number & one special character</mat-hint>
+            <span *ngIf="password?.errors?.['pattern'] || password?.invalid" class="hint">Password must have at least 8 characters. Must contain at least one uppercase letter, one number & one special character</span>
 
             <div class="errors" *ngIf="password?.invalid && password?.touched">
                 <span *ngIf="password?.errors?.['required']">Please enter a password</span>
