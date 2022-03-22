@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router';import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
     const formData = this.Login.getRawValue();
 
     const data = {
-      email: formData.email,
-      password: formData.password,
+      email: this.email?.value,
+      password: this.password?.value,
       // grant_type: 'password',
       // client_id: '95df6e35-1d6a-446f-8f01-d9cb732d4f16',
       // client_secret: '6BzFuED89K27fK9gLwjrZwSgQpLeKWcz87jixk12',
@@ -46,12 +46,13 @@ export class LoginComponent implements OnInit {
     // daata.append("client_secret", data.client_secret);
     // daata.append("scope", data.scope);
 
-    this.http.post('http://10.44.16.165:8000/api/v1/login', daata).subscribe({
+    this.http.post(`${environment.apiAddress}/login`, daata).subscribe({
       next: (result: any) => {
         localStorage.setItem( 'token', result.data)
-        this.router.navigate(['/']);
-        // console.log('success');
-        console.log(result);
+        this.router.navigate(['/post-a-review']);
+        alert('Successfully logged in')
+        // // console.log('success');
+        // console.log(result);
       },
       error: (error) => {
         // console.log('error');
