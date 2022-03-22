@@ -18,6 +18,7 @@ import { ReviewFormComponent } from './components/review-form/review-form.compon
 import { RatingComponent } from './components/rating/rating.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ReviewFormComponent,
     RatingComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
