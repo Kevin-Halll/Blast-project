@@ -1,6 +1,6 @@
 
 <div>
-    <form class="form" [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="addUser(registerForm)">
         <h1 class="form-title">Registration Form</h1>
 
         <!-- first name information -->
@@ -34,16 +34,27 @@
             </div>
         </div>
 
+        <!-- Phone number information -->
+        <div class="input-field">
+             <label for="Phone number" class="required-field">Phone Number</label>
+             <input type="text" name="phoner" placeholder="XXX-XXX-XXXX" formControlName="phoneNumber">
+
+             <div class="errors" *ngIf="phoneNumber?.invalid && phoneNumber?.touched">
+              <span *ngIf="phoneNumber?.errors?.['required']">Please enter phone number</span>
+              <span *ngIf="phoneNumber?.errors?.['pattern']">Please enter a valid phone number</span>
+          </div>
+        </div>
+
         <!-- address information -->
         <div formGroupName="address">
             <div class="input-field">
                 <label for="address" class="required-field">Address</label>
                 <input type="text" name="address" placeholder="Street Address" formControlName="streetAddress">
             </div>
-    
+
             <div class="address-sub">
                 <input type="text" placeholder="City" formControlName="addressCity">
-             
+
                 <select name="" id="" class="parish" formControlName="addressParish">
                     <option value="">Parish</option>
                     <option value="Kingston">Kingston</option>
@@ -62,18 +73,18 @@
                     <option value="St Catherine">St Thomas</option>
                 </select>
             </div>
-    
+
             <div class="errors">
                 <!-- <span *ngIf="registerForm?.address?.errors">Please enter an address</span> -->
-                
+
                 <!-- should be fixed -->
                 <span *ngIf="streetAddress?.errors?.['required'] && streetAddress?.touched">Please enter street address</span>
                 <span *ngIf="addressCity?.errors?.['required'] && addressCity?.touched">Please enter a city</span>
                 <span *ngIf="addressParish?.errors?.['required'] && addressParish?.touched">Please enter a parish</span>
             </div>
-            
+
         </div>
-        
+
         <!-- date of birth information -->
         <div class="input-field">
             <label for="dob">Date of Birth</label>
@@ -107,5 +118,5 @@
 
         <!-- submit button -->
         <button class="signup-button" [disabled]="!registerForm.valid">Sign Up</button>
-    </form> 
+    </form>
 </div>
