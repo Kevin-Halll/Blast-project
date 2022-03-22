@@ -23,7 +23,7 @@ export class RegistrationFormComponent implements OnInit {
     firstName : new FormControl('', Validators.required),
     lastName : new FormControl('', Validators.required),
     email : new FormControl('', [Validators.required, Validators.pattern(/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/)]),
-    phoneNumber: new FormControl('',[Validators.required, Validators.pattern(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s-]\d{3}[\s-]\d{4}$/)]),
+    phoneNumber: new FormControl('',[Validators.required, Validators.pattern(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/)]),
     address : new FormGroup({
       streetAddress: new FormControl('',),
       addressCity: new FormControl('', ),
@@ -123,5 +123,12 @@ export class RegistrationFormComponent implements OnInit {
   get addressParish(){
     return this.registerForm.get(['address','addressParish'])
   }
+
+//  view password 
+public showPassword: boolean = false;
+public togglePasswordVisibility(): void {
+  this.showPassword = !this.showPassword;
+}
+ 
 
 }
