@@ -1,6 +1,9 @@
 <section>
     <nav>
-        <mat-toolbar color="warn" [ngClass]="navRoute('/')? 'home-nav': 'not-home-nav'">
+        <!-- [ngClass]="navRoute('signup') ? ([style.display]="'none'") : ([ngStyle.display]="'block'")" -->
+        <mat-toolbar color="warn" 
+
+        [ngClass]="navRoute('/')? 'home-nav': 'not-home-nav' && navRoute('/signup') ? 'hide' : 'not-home-nav'">
             <span>
                 <a routerLink="">
                     Blast!
