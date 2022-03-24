@@ -28,13 +28,13 @@ import { AboutComponent } from './components/about/about.component';
     SearchBarComponent,
     HeroComponent,
     HeroCardsComponent,
-    RegistrationFormComponent,
     FooterComponent,
     ReviewFormComponent,
     RatingComponent,
     LoginComponent,
     HomeComponent,
     AboutComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
