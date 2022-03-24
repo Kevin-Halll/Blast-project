@@ -74,21 +74,8 @@
                     <div>
                         <mat-form-field appearance="outline">
                             <mat-label>Parish</mat-label>
-                                <mat-select formControlName="addressParish"  [(value)]="selected">
-                                    <mat-option vlaue="Kingston">Kingston</mat-option>
-                                    <mat-option vlaue="St Andrew">St Andrew</mat-option>
-                                    <mat-option vlaue="St catherine">St Catherine</mat-option>
-                                    <mat-option vlaue="St Elizabeth">St Elizabeth</mat-option>
-                                    <mat-option vlaue="St Mary">St Mary</mat-option>
-                                    <mat-option vlaue="St Ann">St Ann</mat-option>
-                                    <mat-option vlaue="St Thomas">St Thomas</mat-option>
-                                    <mat-option vlaue="St James">St James</mat-option>
-                                    <mat-option vlaue="Trelawny">Trelawny</mat-option>
-                                    <mat-option vlaue="Hanover">Hanover</mat-option>
-                                    <mat-option vlaue="Portland">Portland</mat-option>
-                                    <mat-option vlaue="Westmoreland">Westmoreland</mat-option>
-                                    <mat-option vlaue="Manchester">Manchester</mat-option>
-                                    <mat-option value="Clarendon">Clarendon</mat-option>
+                                <mat-select formControlName="addressParish">
+                                    <mat-option vlaue="Kingston" *ngFor="let parish of parishes" [value]="parish.value">{{parish.viewValue}}</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>

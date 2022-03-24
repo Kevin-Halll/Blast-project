@@ -1,11 +1,16 @@
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: 1px solid blue;
+ 
 }
 
 .left-advert-wrapper{
-    background-color: red;
+    
     width: 100%;
+   background-image: url('/assets/delicious-food-white-plate.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 
 .form{
@@ -53,9 +58,6 @@ mat-form-field{
     width: 100%;
 }
 
-mat-form-field matInput{
-    height: 10px;
-}
 
 mat-card{
     // width: 100%;
@@ -68,7 +70,7 @@ mat-card{
 }
 
 .form-div{
-    background-image:radial-gradient(ellipse farthest-corner at 0 140%, #3c84cc 0%, #316dc2 70%, #4e95d3 70%);
+    // background-image:radial-gradient(ellipse farthest-corner at 0 140%, #db402c 0%, #be2f2f 70%, #cf0e0e 70%);
     // display: block;
     text-align: center;
     width: 100%;
