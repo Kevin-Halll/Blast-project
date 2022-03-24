@@ -17,6 +17,9 @@ export class RegistrationFormComponent implements OnInit {
   registerForm!: FormGroup;
   ngOnInit(): void {
 
+    // load image for advert
+  
+
     // formgroup information
   this.registerForm = new FormGroup({
     firstName : new FormControl('', Validators.required),
@@ -125,9 +128,14 @@ export class RegistrationFormComponent implements OnInit {
 
 //  view password 
 public showPassword: boolean = false;
+public showPassword2:boolean = false;
+
 public togglePasswordVisibility(): void {
   this.showPassword = !this.showPassword;
 }
  
- 
+public togglePasswordVisibility2(): void {
+  this.showPassword2 = !this.showPassword2;
+}
+selected!:string
 }
