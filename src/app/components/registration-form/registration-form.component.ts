@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { passwordsMatchValidator } from './confirm-password';
+import { Parish } from './Parish';
 
 
 @Component({
@@ -130,5 +131,12 @@ public togglePasswordVisibility(): void {
   this.showPassword = !this.showPassword;
 }
  
+// select value for parishes 
+
+  parishes: Parish[] = [
+    {value: 'steak-0', viewValue: 'St Catherine'},
+    {value: 'pizza-1', viewValue: 'Kingston'},
+    {value: 'tacos-2', viewValue: 'St Andrew'},
+  ];
 
 }

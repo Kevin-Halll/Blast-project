@@ -14,8 +14,13 @@
 }
 
 .form .input-field{
-    margin:18px 0;
     position: relative;
+}
+
+.form .firstAndlastName{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
 }
 
 // form required fields
@@ -26,14 +31,14 @@
 }
 
 // form input field
-.form input{
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    outline: none;
-    border-radius: 4px;
-    border: 1px solid #999;
-}
+// .form input{
+//     box-sizing: border-box;
+//     padding: 5px;
+//     width: 100%;
+//     outline: none;
+//     border-radius: 4px;
+//     border: 1px solid #999;
+// }
 
 .form .address-sub .parish{
     background: #fff;
@@ -61,18 +66,6 @@ button:disabled{
     cursor: not-allowed;
 }
 
-// prevent jumping of form after errors popup
-// .errors{
-//     position: absolute;
-// }
-
-.errors span{
-    color: red;
-}
-
-input.ng-invalid.ng-touched{
-    border: 1px solid #d93025;
-}
 
 .address-sub{
     display: grid;

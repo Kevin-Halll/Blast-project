@@ -3,77 +3,83 @@
     <form class="form" [formGroup]="registerForm" (ngSubmit)="addUser(registerForm)">
         <h1 class="form-title">Registration Form</h1>
 
-        <!-- first name information -->
-        <div class="input-field">
-            <label for="firstName" class="required-field">First Name</label>
-            <input type="text" name="firstName" placeholder="First Name" formControlName="firstName" >
-
-            <div class="errors" *ngIf="firstName?.invalid && firstName?.touched">
-                <span *ngIf="firstName?.errors?.['required']">Please enter first name</span>
+        <!-- first  and last name information -->
+        <div class="firstAndlastName">
+            <div class="input-field">
+                <mat-form-field appearance="outline">
+                    <mat-label for="firstName">First Name</mat-label>
+                        <input type="text" matInput name="firstName" placeholder="First Name" formControlName="firstName" >
+    
+                        <div class="errors" *ngIf="firstName?.invalid && firstName?.touched">
+                            <mat-error *ngIf="firstName?.errors?.['required']">Please enter first name</mat-error>
+                        </div>
+                </mat-form-field>
+            </div>
+    
+            <!-- last name information -->
+            <div class="input-field">
+                <mat-form-field appearance="outline">
+                    <mat-label for="lastName">Last Name</mat-label>
+                        <input type="text" matInput  name="lastName" placeholder="Last Name" formControlName="lastName">
+    
+                            <div class="errors" *ngIf="lastName?.invalid && lastName?.touched">
+                                <mat-error *ngIf="lastName?.errors?.['required']">Please enter last name</mat-error>
+                            </div>
+                </mat-form-field>
             </div>
         </div>
-
-        <!-- last name information -->
-        <div class="input-field">
-            <label for="lastName" class="required-field">Last Name</label>
-            <input type="text" name="lastName" placeholder="Last Name" formControlName="lastName">
-
-            <div class="errors" *ngIf="lastName?.invalid && lastName?.touched">
-                <span *ngIf="lastName?.errors?.['required']">Please enter last name</span>
-            </div>
-        </div>
+        
 
         <!-- email information -->
         <div class="input-field">
-            <label for="email" class="required-field">Email</label>
-            <input type="email" name="email" placeholder="Email" formControlName="email">
+            <mat-form-field appearance="outline">
+                <mat-label for="email">Email</mat-label>
+                <input type="email" name="email" matInput placeholder="Email" formControlName="email">
 
-            <div class="errors" *ngIf="email?.invalid && email?.touched">
-                <span *ngIf="email?.errors?.['required']">Please enter email</span>
-                <span *ngIf="email?.errors?.['pattern']">Please enter a valid email</span>
-            </div>
+                <div class="errors" *ngIf="email?.invalid && email?.touched">
+                    <mat-error *ngIf="email?.errors?.['required']">Please enter email</mat-error>
+                    <mat-error *ngIf="email?.errors?.['pattern']">Please enter a valid email</mat-error>
+                </div>
+            </mat-form-field>
         </div>
 
         <!-- Phone number information -->
         <div class="input-field">
-             <label for="PhoneNumber" class="required-field">Phone Number</label>
-             <input type="tel" name="phoneNumber" placeholder="XXX-XXX-XXXX" formControlName="phoneNumber">
+            <mat-form-field appearance="outline">
+                <mat-label for="PhoneNumber">Phone Number</mat-label>
+                <input type="tel" name="phoneNumber" matInput placeholder="XXX-XXX-XXXX" formControlName="phoneNumber">
 
-             <div class="errors" *ngIf="phoneNumber?.invalid && phoneNumber?.touched">
-              <span *ngIf="phoneNumber?.errors?.['required']">Please enter phone number</span>
-              <span *ngIf="phoneNumber?.errors?.['pattern']">Please enter a valid phone number</span>
-          </div>
+                <div class="errors" *ngIf="phoneNumber?.invalid && phoneNumber?.touched">
+                    <mat-error *ngIf="phoneNumber?.errors?.['required']">Please enter phone number</mat-error>
+                    <mat-error *ngIf="phoneNumber?.errors?.['pattern']">Please enter a valid phone number</mat-error>
+                </div>
+            </mat-form-field>
         </div>
 
         <!-- address information -->
         <div formGroupName="address">
             <div class="input-field">
-                <label for="address">Address</label>
-                <input type="text" name="address" placeholder="Street Address" formControlName="streetAddress">
+                <mat-form-field appearance="outline">
+                    <mat-label for="address">Address</mat-label>
+                    <input type="text" matInput  name="address" placeholder="Street Address" formControlName="streetAddress">
+                </mat-form-field>
             </div>
 
             <div class="address-sub">
-                <input type="text" placeholder="City" formControlName="addressCity">
+                <mat-form-field> 
+                    <mat-label for="address">City</mat-label>    
+                    <input type="text" matInput placeholder="City" formControlName="addressCity">
+                </mat-form-field> 
 
-                <select name="" id="" class="parish" formControlName="addressParish">
-                    <option value="">Parish</option>
-                    <option value="Kingston">Kingston</option>
-                    <option value="St Catherine">St Catherine</option>
-                    <option value="St Andrew">St Andrew</option>
-                    <option value="Clarendon">Clarendon</option>
-                    <option value="St Catherine">Manchester</option>
-                    <option value="St Elizabeth">St Elizabeth</option>
-                    <option value="Westmoreland">Westmoreland</option>
-                    <option value="Hanover">Hanover</option>
-                    <option value="St James">St James</option>
-                    <option value="Trewlany">Trewlany</option>
-                    <option value="St Ann">St Ann</option>
-                    <option value="St Mary">St Mary</option>
-                    <option value="Portland">Portland</option>
-                    <option value="St Thomas">St Thomas</option>
-                </select>
+                <mat-form-field appearance="fill">
+                    <mat-label>Parish</mat-label>
+                    <mat-select formControlName="addressParish">
+                        <mat-option *ngFor="let parish of parishes" [value]="parishes.value">
+                            {{parish.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
-
         </div>
 
         <!-- date of birth information -->
