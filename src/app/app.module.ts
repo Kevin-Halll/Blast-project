@@ -19,6 +19,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomeComponent } from './components/home/home.component';
     ReviewFormComponent,
     RatingComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
