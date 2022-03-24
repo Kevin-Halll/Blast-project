@@ -1,8 +1,11 @@
 <section>
     <nav>
-        <mat-toolbar color="warn">
+        <!-- [ngClass]="navRoute('signup') ? ([style.display]="'none'") : ([ngStyle.display]="'block'")" -->
+        <mat-toolbar color="warn" 
+
+        [ngClass]="navRoute('/')? 'home-nav': 'not-home-nav' && navRoute('/signup') ? 'hide' : 'not-home-nav'">
             <span>
-                <a href="">
+                <a routerLink="">
                     Blast!
                 </a>
             </span>
@@ -11,24 +14,33 @@
 
             <ul>
                 <li>
-                    <a href="" mat-button>
+                    <a routerLink="post-a-review" mat-button>
                         Write a Review
                     </a>
                 </li>
                 <li>
-                    <a href="" mat-button>
+                    <a routerLink="about" mat-button>
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="" mat-button>
-                        Login
-                    </a>
-                </li>
-                <li>
-                    <a href="" mat-button>
+                    <a routerLink="/signup" mat-button>
                         Signup
                     </a>
+                </li>
+                <li style="display: flex;">
+                    <!-- <a href="" mat-button>
+                        Login
+                    </a> -->
+
+                    <a mat-button [matMenuTriggerFor]="belowMenu">Login</a>
+                    <mat-menu #belowMenu="matMenu" yPosition="below">
+                    <!-- <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button> -->
+                    <span>
+                        <app-login></app-login>
+                    </span>
+                    </mat-menu>
                 </li>
             </ul>
         </mat-toolbar>

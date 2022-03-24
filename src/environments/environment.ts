@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiAddress:"https://laravel-blast-dev.herokuapp.com/api/v1",
   production: false
 };
 

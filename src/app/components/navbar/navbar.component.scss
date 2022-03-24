@@ -1,10 +1,18 @@
-nav mat-toolbar{
+.home-nav{
     position: absolute;
     display: flex;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.2);
 }
-
+.not-home-nav{
+    // position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background: #303036;
+}
+.hide {
+    display: none;
+}
 ul{
     list-style: none;
     display: flex;

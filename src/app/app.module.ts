@@ -10,8 +10,18 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroCardsComponent } from './components/hero-cards/hero-cards.component';
+
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
+import { ReviewFormComponent } from './components/review-form/review-form.component';
+import { RatingComponent } from './components/rating/rating.component';
+import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +31,12 @@ import { CompanyProfileComponent } from './components/company-profile/company-pr
     HeroCardsComponent,
     FooterComponent,
     CompanyProfileComponent,
+    ReviewFormComponent,
+    RatingComponent,
+    LoginComponent,
+    HomeComponent,
+    AboutComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +45,7 @@ import { CompanyProfileComponent } from './components/company-profile/company-pr
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
