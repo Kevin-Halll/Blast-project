@@ -1,10 +1,7 @@
 .form{
     background-color: white;
-    box-shadow: 1px 1px 5px 0px rgba(34, 34, 34, 0.75);
     border-radius: 8px;
-    margin: 0 auto;
     padding: 2.4rem 4rem 1.2rem 4rem;
-    width: 40%;
 }
 
 .form-title{
@@ -13,41 +10,10 @@
     text-align: center;
 }
 
-.form .input-field{
-    position: relative;
-}
-
 .form .firstAndlastName{
     display: grid;
-    gap: 8px;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
-}
-
-// form required fields
-.form .required-field::after{
-    color: #F44336;
-    content: "*";
-    margin-left: 2px
-}
-
-// form input field
-// .form input{
-//     box-sizing: border-box;
-//     padding: 5px;
-//     width: 100%;
-//     outline: none;
-//     border-radius: 4px;
-//     border: 1px solid #999;
-// }
-
-.form .address-sub .parish{
-    background: #fff;
-    border: 1px solid #999;
-    border-radius: 4px;
-}
-
-.form input[type="date"]{
-    cursor:text;
 }
 
 .signup-button{
@@ -64,20 +30,24 @@
 button:disabled{
     background: #ccc;
     cursor: not-allowed;
+    width: 100%;
 }
 
 
 .address-sub{
     display: grid;
-    gap: 8px;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
 }
 
-.hint{
-    color: rgb(150, 149, 149);
-    font-size: 12px;
+mat-form-field{
+    width: 100%;
 }
 
+mat-card{
+    width: 40%;
+    margin:0 auto
+}
 // responsive design 
 
 // @media screen and (max-width: 1100px) {
