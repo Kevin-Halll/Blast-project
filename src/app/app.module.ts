@@ -14,6 +14,7 @@ import { HeroCardsComponent } from './components/hero-cards/hero-cards.component
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 
 import { FooterComponent } from './components/footer/footer.component';
+import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 import { ReviewFormComponent } from './components/review-form/review-form.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,6 +30,7 @@ import { AboutComponent } from './components/about/about.component';
     HeroComponent,
     HeroCardsComponent,
     FooterComponent,
+    CompanyProfileComponent,
     ReviewFormComponent,
     RatingComponent,
     LoginComponent,

@@ -1,9 +1,13 @@
 <section>
+
+    <div class="hero" [style.background-image]="heroBackground">
+    </div>
+</section>
+<app-hero-cards></app-hero-cards>
     <div class="hero" 
-    [style.background-image]="heroBackground"
-    
-    >
+    [style.background-image]="heroBackground">
     <!-- {{companyData | json}} -->
 </div>
 </section> 
 <app-hero-cards [companyData]="companyData"></app-hero-cards>  
+
