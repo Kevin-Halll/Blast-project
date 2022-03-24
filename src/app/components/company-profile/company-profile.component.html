@@ -1,0 +1,289 @@
+<div class="title">
+    <h1>Company Name</h1>
+    <span>Location</span>
+    <span>Open 10:30am - 9:00pm</span>
+</div>
+
+
+<div class="button">
+    <button class="button-option" mat-button color="warn">ADD REVIEW</button>
+    <button class="button-option" mat-button color="warn">ADD PHOTOS</button>
+    <button class="button-option" mat-button color="warn">SHARE</button>
+</div>
+
+
+
+<div class="cards">
+    <div class="cards-review">
+        <div class="cards-rating">
+            <h2>Rating & Reviews</h2>
+            <h3>4.0</h3>
+            <small>Total Reviews</small>
+            <div class="cards-scores">
+                <h4>Elemental Scores</h4>
+                <span>Food</span>
+                <span>Diversity</span>
+                <span>Value for money</span>
+                <span>Service</span>
+                <span>Cleanliness</span>
+                <span>Environment</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cards-details">
+        <div class="amenity">
+            <div class="options">
+                <h2>Amenities</h2>
+                <span>Drive Through</span>
+                <span>parking</span>
+                <span>Delivery</span>
+                <span>Dining</span>
+                <span>Wifi Access</span>
+                <span>Card Payments</span>
+                <span>Air Coditioning</span>
+                <span>Television</span>
+            </div>
+            <div class="check">
+                <!-- <h2>Avalablity</h2> -->
+                <div [ngSwitch]="companyData.driveThrough" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.parking" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.delivery" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.dining" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.wifi" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.card" ng class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.conditioning" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.tv" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="accomodation">
+            <div class="options">
+                <h2>Accomodation</h2>
+                <span>Disabled</span>
+                <span>Vegan</span>
+                <span>Vegetarian</span>
+            </div>
+            <div class="acom-check">
+                <!-- <h2>Avalablity</h2> -->
+                <div [ngSwitch]="companyData.disabled" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.vegan" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+                <div [ngSwitch]="companyData.vegetarian" class="check-field">
+                    <mat-icon *ngSwitchCase="true" class="success">done</mat-icon>
+                    <mat-icon *ngSwitchCase="false" class="fail">close</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-location">
+        <div class="cards-image">
+            <img src="https://www.cnet.com/a/img/resize/e40fb6ae92203cf385182b7ef3ebdf0a111d7fb7/2018/08/30/290ae0f3-d8e8-4ccc-9fe7-0935ed9bdf00/google-maps-ogi.jpg?auto=webp&fit=crop&height=675&width=1200"
+                alt="">
+        </div>
+        <div class="card-content">
+            <h2>Location & Contact</h2>
+            <a href="">
+                <span>
+                    <mat-icon class="icon"> location_on</mat-icon>
+                    Some street Some road Some City
+                </span>
+            </a>
+
+            <a href="">
+                <span>
+                    <mat-icon class="icon">phone</mat-icon>
+                    876-456-9871
+                </span>
+            </a>
+            <a href="">
+                <span>
+                    <mat-icon class="icon">email</mat-icon>
+                    company@domain.com
+                </span>
+            </a>
+            <a href="">
+                <span>
+                    <mat-icon class="icon">tv</mat-icon>
+                    company Website.com
+                </span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<h2 class="heading">Menu</h2>
+
+<div class="menu">
+    <div class="menu-card">
+
+        <div class="menu-image">
+            <img src="https://media.istockphoto.com/photos/restaurant-plates-picture-id104704117?k=20&m=104704117&s=612x612&w=0&h=kpYSHTcSnkQZbhHmUr25jIIvns7f3x2oBMNvX1lLTwU="
+                alt="">
+        </div>
+        <div class="card-detail">
+            <h2>Steak</h2>
+            <span><b>Course: </b>Auntery</span>
+            <span><b>From: </b> 7:00pm <b>to</b> 10:00pm</span>
+            <span>Ratings: </span>
+        </div>
+        <a href=""><span class="view">View more</span></a>
+    </div>
+
+    <div class="menu-card">
+
+        <div class="menu-image">
+            <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2003/9/22/0/tm1a18_tossed_salad.jpg.rend.hgtvcom.616.462.suffix/1547648738306.jpeg"
+                alt="">
+        </div>
+        <div class="card-detail">
+            <h2>Tossed Salad</h2>
+            <span><b>Course: </b>Appetizer</span>
+            <span><b>From: </b> 7:00pm <b>to</b> 10:00pm</span>
+            <span>Ratings: </span>
+        </div>
+        <a href=""><span class="view">View more</span></a>
+    </div>
+    <div class="menu-card">
+
+        <div class="menu-image">
+            <img src="https://cdn.loveandlemons.com/wp-content/uploads/2021/06/summer-desserts.jpg" alt="">
+        </div>
+        <div class="card-detail">
+            <h2>Strawberry Shortcake</h2>
+            <span><b>Course: </b>Dessert</span>
+            <span><b>From: </b>7:00pm <b>to</b> 10:00pm</span>
+            <span>Ratings: </span>
+        </div>
+        <a href=""><span class="view">View more</span></a>
+    </div>
+    <div class="menu-card">
+
+        <div class="menu-image">
+            <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/09/Hearty-pasta-soup-c4290f8.jpg"
+                alt="">
+        </div>
+        <div class="card-detail">
+            <h2>Chicken Soup</h2>
+            <span><b>Course: </b>Auntery</span>
+            <span><b>From: </b> 7:00pm <b>to</b> 10:00pm</span>
+            <span>Ratings: </span>
+        </div>
+        <a href=""><span class="view">View more</span></a>
+    </div>
+</div>
+
+<h2 class="heading">Photos</h2>
+<div class="photo">
+    <div class="photo-card">
+        <div class="photo-img">
+            <img src="https://media.istockphoto.com/photos/modern-restaurant-interior-design-picture-id1211547141?k=20&m=1211547141&s=612x612&w=0&h=KiZX3NBZVCK4MlSh4BJ8hZNSJcTIMbNSSV2yusw2NmM="
+                alt="">
+        </div>
+        <div class="photo-content">
+            <h2>Some Restaurant</h2>
+
+            <span>Location: some place</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad excepturi placeat
+                asperiores odio quae consequ</p>
+            <div class="photo-button">
+                <button class="photo-option" mat-button color="warn">Visit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="photo-card">
+        <div class="photo-img">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                alt="">
+        </div>
+        <div class="photo-content">
+            <h2>Cusine</h2>
+
+            <span>Location: some place</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad excepturi placeat
+                asperiores odio quae consequ</p>
+            <div class="photo-button">
+                <button class="photo-option" mat-button color="warn">Visit</button>
+            </div>
+        </div>
+    </div>
+    <div class="photo-card">
+        <div class="photo-img">
+            <img src="https://thumbor.thedailymeal.com/LrAh7jXYv-GwUj4rEYHVCFqHHHE=/870x565/filters:focal(895x584:896x585)/https://www.thedailymeal.com/sites/default/files/story/2018/0.jpg"
+                alt="">
+        </div>
+        <div class="photo-content">
+            <h2>Family</h2>
+
+            <span>Location: some place</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad excepturi placeat
+                asperiores odio quae consequ</p>
+            <div class="photo-button">
+                <button class="photo-option" mat-button color="warn">Visit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="review">
+    <h1>Reviews</h1>
+    <button mat-button color="warn">Write A Review</button>
+</div>
+
+<div class="comment">
+    <div class="comment-photo">
+        <img src="https://media.istockphoto.com/photos/tropical-white-sand-beach-with-coco-palms-picture-id1181563943?k=20&m=1181563943&s=612x612&w=0&h=r46MQMvFnvrzzTfjVmvZED5nZyTmAYwISDvkdtM2i2A="
+            alt="">
+    </div>
+
+    <div class="comment-content">
+        <small>Reviewed 1 Week Ago <span>
+                <mat-icon class="mobile"> mobile_screen_share</mat-icon>
+            </span>via Mobile</small>
+
+        <h2>Casual Dinner</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo, illum accusamus eligendi dignissimos
+            earum harum porro voluptatum eveniet eaque, ipsum</p>
+
+        <span><b>Date visited: </b>March 2022</span>
+        <p class="help">helpful?</p>
+    </div>
+
+
+
+</div>
