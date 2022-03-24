@@ -1,4 +1,4 @@
-import { BlastServiceService } from './../../Services/blast-service.service';
+import { RegistrationService } from './../../Services/Registration-service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
@@ -12,7 +12,7 @@ import { passwordsMatchValidator } from './confirm-password';
 })
 export class RegistrationFormComponent implements OnInit {
 
-  constructor(private http: HttpClient, private BlastServiceService: BlastServiceService) { }
+  constructor(private http: HttpClient, private RegistrationService: RegistrationService) { }
 
   submitted: boolean = false;
   registerForm!: FormGroup;
@@ -69,7 +69,7 @@ export class RegistrationFormComponent implements OnInit {
       // userInfo.append('parish',data.parish);
       userInfo.append('dob',data.dob);
 
-        this.BlastServiceService.postUser(userInfo).subscribe({
+        this.RegistrationService.postUser(userInfo).subscribe({
           next:(resp: any)=>{
             // console.log('User Added');
             // console.log(resp);
@@ -124,11 +124,11 @@ export class RegistrationFormComponent implements OnInit {
     return this.registerForm.get(['address','addressParish'])
   }
 
-//  view password 
+//  view password
 public showPassword: boolean = false;
 public togglePasswordVisibility(): void {
   this.showPassword = !this.showPassword;
 }
- 
+
 
 }

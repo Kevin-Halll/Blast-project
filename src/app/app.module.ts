@@ -27,12 +27,12 @@ import { HomeComponent } from './components/home/home.component';
     SearchBarComponent,
     HeroComponent,
     HeroCardsComponent,
-    RegistrationFormComponent,
     FooterComponent,
     ReviewFormComponent,
     RatingComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
