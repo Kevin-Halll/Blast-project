@@ -1,7 +1,9 @@
+import { LoginService } from './../../Services/login.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { Router } from '@angular/router';import { environment } from 'src/enviro
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private router:Router) {}
+  constructor(private http: HttpClient, private router:Router, private LoginService:LoginService) {}
 
   myUrl: any;
 
@@ -46,7 +48,7 @@ export class LoginComponent implements OnInit {
     // daata.append("client_secret", data.client_secret);
     // daata.append("scope", data.scope);
 
-    this.http.post(`${environment.apiAddress}/login`, daata).subscribe({
+    this.LoginService.loginUser(daata).subscribe({
       next: (result: any) => {
         localStorage.setItem( 'token', result.data)
         this.router.navigate(['/post-a-review']);
