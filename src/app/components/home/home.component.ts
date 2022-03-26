@@ -22,7 +22,7 @@ export class HomeComponent {
       this.companys = this.companyData.data
 
     })
-    
+
   }
   
 
