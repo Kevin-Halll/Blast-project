@@ -12,6 +12,7 @@ export class HeroComponent implements OnInit, OnChanges {
 
   heroBackground: string = 'url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/8a6cc705477a/assets/img/home/hero_photos/uteUmycsbh0UibXk-At-3A.jpg)'
   color:string = 'pink'
+  valueChanges: number = 0;
   constructor(private _homeService:HomeService) { }
 
     ngOnInit(): void {
@@ -32,6 +33,10 @@ export class HeroComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes['companyData'].currentValue);
+    console.log(this.companyData.value);
+    this.valueChanges++
+    console.log(this.valueChanges);
+    
   }
 
 }

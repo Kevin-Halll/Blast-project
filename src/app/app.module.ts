@@ -20,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { LoadingDataComponent } from './components/loading-data/loading-data.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AboutComponent } from './components/about/about.component';
     LoginComponent,
     HomeComponent,
     AboutComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    LoadingDataComponent
   ],
   imports: [
     BrowserModule,
