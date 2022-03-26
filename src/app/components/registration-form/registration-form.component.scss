@@ -1,18 +1,21 @@
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid blue;
+    // border: 1px solid blue;
  
 }
 
 .left-advert-wrapper{
     
     width: 100%;
-   background-image: url('/assets/delicious-food-white-plate.jpg');
+//    background-image: url('/assets/delicious-food-white-plate.jpg');
    background-size: cover;
    background-repeat: no-repeat;
 }
 
+.left-advert-wrapper .content h1,h2{
+    font-weight: bold
+}
 .form{
     border-radius: 8px;
     padding: 1rem 4rem 1.2rem 4rem;
@@ -58,7 +61,6 @@ mat-form-field{
     width: 100%;
 }
 
-
 mat-card{
     // width: 100%;
     margin:0 auto;
@@ -69,9 +71,13 @@ mat-card{
     cursor: pointer;
 }
 
+.password{
+    margin-bottom: 10px;
+}
+
 .form-div{
-    // background-image:radial-gradient(ellipse farthest-corner at 0 140%, #db402c 0%, #be2f2f 70%, #cf0e0e 70%);
-    // display: block;
+    background-image: radial-gradient(109% 100% at top right,transparent 92%, #fff 92.5%),
+    linear-gradient(135deg, #ad2828 0%, #ce1616 100%);
     text-align: center;
     width: 100%;
 }
