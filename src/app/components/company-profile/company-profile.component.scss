@@ -1,0 +1,363 @@
+
+
+.title{
+    position: absolute;
+    bottom: 16.5rem;
+    width: 25rem;
+    left: 2.5rem;
+    line-height: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 20px;
+  
+
+    h1{
+        color: #fff;
+        font-size: 33px;
+    }
+    span{
+        display: block;
+        font-size: 20px;
+        margin-bottom: .8rem;
+        color: #fff;
+
+    }
+}
+
+
+.button{
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
+
+    &-option{
+        background-color: orangered;
+        color: white;
+        margin-right: 1.1rem;
+    }
+}
+
+
+.cards{
+    margin-left: 2.5rem;
+    display: flex;
+  
+  
+    &-review{
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        width: 50rem;
+        height: fit-content;        
+        padding: 30px;
+        margin-right: 2.5rem;
+        border-radius: .5rem;
+
+     
+    }
+
+    &-scores{
+        margin-top: 2.5rem;
+
+
+        span{
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &-button{
+        margin-left: 7rem;
+        margin-top: .8rem;
+        background-color: orangered;
+        color: white;
+        width: 7rem;
+        margin-bottom: 20px;
+
+    }
+
+    &-details{
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+         width: 50rem;
+         height: fit-content;        
+         padding: 30px;
+         margin-right: 2.5rem;
+         border-radius: .5rem;
+
+         .amenity{
+             display: flex;
+            
+
+             .check{
+                 position: relative;
+                 top: 40px;
+                 margin-left: 10rem;
+
+                 mat-icon{
+                     margin-right: 15px;
+                 }
+
+                 .success{
+                     color: rgb(35, 240, 35);
+                 }
+
+                 .fail{
+                    color: rgb(247, 37, 37);
+                }
+             }
+
+             
+            
+
+             .check-field{
+                 margin-bottom: .6rem;
+             }
+         }
+
+         .accomodation{
+            display: flex;
+        
+        
+        .acom-check{
+            position: relative;
+            top: 40px;
+            margin-left: 8rem;
+
+
+            
+        }
+
+        .check-field{
+            margin-bottom: .6rem;
+
+            mat-icon{
+                margin-right: 9px;
+            }
+
+            .success{
+                color: rgb(35, 240, 35);
+            }
+
+            .fail{
+               color: rgb(247, 37, 37);
+           }
+           
+        }
+    }
+
+        h2{
+           
+
+         }
+
+         .accomodation{
+             margin-top: 1.1rem;
+         }
+
+         span{
+             display: block;
+             margin-bottom: 20px;
+         }
+
+        
+    }
+
+
+
+    &-image{
+        width: 100%;
+        height: 12rem;
+        overflow: hidden;
+    }
+
+    &-location{
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        width: 50rem;
+        height:29rem;       
+         margin-right: 2.5rem;
+         border-radius: .5rem;
+
+         span{
+             display: block;
+             margin-bottom: 1.1rem;
+         }
+
+         h2{
+             margin-top: .4rem;
+         }
+
+         .icon{
+             position: relative;
+             top: 5px;
+             right: 5px
+         }
+
+         .card-content{
+             padding-left: 30px;
+         }
+
+     }
+}
+
+
+.heading{
+    margin-top: 2rem;
+     margin-left: 2.5rem;
+}
+.menu{
+    display: flex;
+    margin-left: 2.5rem;
+    justify-content: center;
+
+
+    &-card{
+
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+         height: 26rem;
+         width: fit-content;
+    
+         margin-right: 2.5rem;
+         border-radius: .5rem;
+
+
+         .view{
+             border: 1px solid orange;
+             padding: 10px;
+             margin-left: 5rem;
+             border-radius: .3rem;
+
+             &:hover{
+                 background-color: orangered;
+                 color: white;
+                 transition: .5s;
+             }
+         }
+
+
+         .card-detail{
+             padding: 10px;
+
+             span{
+                 display: block;
+                 margin-bottom: .6rem;
+
+
+                 b{
+                     color: orange;
+                     letter-spacing: 1.1px;
+                     font-weight: 500;
+                     padding-right: .2rem;
+                 }
+             }
+         }
+
+    }
+
+    &-image{
+      
+
+        img{
+            height: 13rem;
+            width: 22rem;
+        }
+    }
+}
+
+.photo{
+    display: flex;
+    margin-left: 2.5rem;
+
+    &-card{
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        width: 35rem;
+         margin-right: 2.5rem;
+         border-radius: .5rem;
+
+        
+    }
+    &-button{
+       margin-left: 8rem;
+
+       .photo-option{
+           background-color: orangered;
+           color: #fff;
+           width: 6rem;
+           margin-bottom: 10px;
+       }
+    }
+
+
+    &-img{
+        width: 25rem;
+    }
+
+    &-content{
+        padding-left: 10px;
+        p{
+            width: 20rem;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+.review{
+    display: flex;
+    margin-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    
+    margin-top: 4rem;
+
+    h1{
+        margin-right: 66.5rem;
+    }
+
+    button{
+        background-color: orangered;
+        color: #fff;
+    }
+
+
+}
+
+.comment{
+    display: flex;
+    margin-left: 2.5rem;
+    border-top: 1px solid rgba(119, 119, 119, 0.39);
+    border-bottom: 1px solid rgba(119, 119, 119, 0.39);
+    padding: 20px;
+    width: 80rem;
+
+    &-photo{
+        margin-right: 2rem;
+        
+
+        img{
+            border-radius: 50%;
+            width: 110px;
+            height: 100px;
+           
+        }
+    }
+
+    &-content{
+
+        .mobile{
+            font-size: 16px;
+            position: relative;
+            right: -8px;
+            top: 2px;
+
+        }
+
+        b{
+            color: orange;
+            font-weight: 400;
+        }
+
+        p{
+            width: 50rem;
+        }
+
+        .help{
+            margin-top: 2rem;
+            font-size: 12px;
+        }
+    }
+}
