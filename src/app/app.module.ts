@@ -21,7 +21,11 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+
+import { LoadingDataComponent } from './components/loading-data/loading-data.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     HomeComponent,
     AboutComponent,
     RegistrationFormComponent,
+
     UserProfileComponent
+
+    LoadingDataComponent
+
   ],
   imports: [
     BrowserModule,
