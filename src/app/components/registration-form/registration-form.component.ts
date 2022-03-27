@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { passwordsMatchValidator } from './confirm-password';
-
+import { Parishes } from './Parishes';
 
 @Component({
   selector: 'app-registration-form',
@@ -37,6 +37,8 @@ export class RegistrationFormComponent implements OnInit {
     validators: passwordsMatchValidator
     }
   );
+
+  
 }
 
   // function for after form has been submitted
@@ -125,10 +127,36 @@ export class RegistrationFormComponent implements OnInit {
   }
 
 //  view password
+//  view password function
 public showPassword: boolean = false;
+public showPassword2:boolean = false;
+
 public togglePasswordVisibility(): void {
   this.showPassword = !this.showPassword;
 }
+ 
+public togglePasswordVisibility2(): void {
+  this.showPassword2 = !this.showPassword2;
+}
 
+// parishes inside address
+  parishes: Parishes[] = [
+    {value: 'Kingston', viewValue: 'Kingston'},
+    {value: 'St Andrew', viewValue: 'St Andrew'},
+    {value: 'St Catherine', viewValue: 'St Catherine'},
+    {value: 'St Thomas', viewValue: 'St Thomas'},
+    {value: 'St Mary', viewValue: 'St Mary'},
+    {value: 'St Elizabeth', viewValue: 'St Elizabeth'},
+    {value: 'St Ann', viewValue: 'St Ann'},
+    {value: 'St James', viewValue: 'St James'},
+    {value: 'Manchester', viewValue: 'Manchester'},
+    {value: 'Portland', viewValue: 'Portland'},
+    {value: 'Clarendon', viewValue: 'Clarendon'},
+    {value: 'Westmoreland', viewValue: 'WestMoreland'},
+    {value: 'Hanover', viewValue: 'Hanover'},
+    {value: 'Trelawny', viewValue: 'Trelawny'},
+  ];
 
 }
+
+
