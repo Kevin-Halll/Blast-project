@@ -2,15 +2,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     // border: 1px solid blue;
- 
 }
 
 .left-advert-wrapper{
-    
     width: 100%;
-//    background-image: url('/assets/delicious-food-white-plate.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
+    background-image: url('/assets/delicious-food-white-plate.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left-advert-wrapper .home{
+    font-weight: 500;
+    letter-spacing: normal;
+    font-size: 20px ;
+    font-family: Roboto, "Helvetica Neue", sans-serif ;
+    padding: 1.4rem 3rem;
+    position: absolute;
 }
 
 .left-advert-wrapper .content h1,h2{
