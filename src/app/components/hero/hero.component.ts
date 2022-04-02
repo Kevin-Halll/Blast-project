@@ -16,13 +16,13 @@ export class HeroComponent implements OnInit, OnChanges {
   constructor(private _homeService:HomeService) { }
 
     ngOnInit(): void {
-      // this._homeService.getCompanys()
-      // .subscribe((apiReturn) =>  {
-      //   this.companyData = apiReturn 
-      //   this.companys = this.companyData.data
-      //   console.log(this.companyData)
+    //   this._homeService.getCompanys()
+    //   .subscribe((apiReturn) =>  {
+    //     this.companyData = apiReturn 
+    //     this.companys = this.companyData.data
+    //     console.log(this.companyData)
   
-      // })
+    //   })
   
     // }
     // setTimeout(() => {

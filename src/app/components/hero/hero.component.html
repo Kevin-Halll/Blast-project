@@ -1,4 +1,10 @@
 <section>
+
+  <div class="hero" [style.background-image]="heroBackground"></div>
+</section>
+<app-hero-cards></app-hero-cards>
+<app-hero-cards [companyData]="companyData"></app-hero-cards>
+
     <div class="hero" 
     [style.background-image]="heroBackground"
     
@@ -7,3 +13,4 @@
 </div>
 </section> 
 <app-hero-cards [companyData]="companyData"></app-hero-cards>  
+
